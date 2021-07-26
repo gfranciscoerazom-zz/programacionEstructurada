@@ -7,9 +7,7 @@
 - Imprimir el valor de las variables ya intecambiadas*/
 int main()
 {
-    int variable1;
-    int variable2;
-    int comodin;
+    int variable1, variable2, comodin;
 
     printf("Ingresa el valor de la variable1: ");
     scanf("%i", &variable1);
