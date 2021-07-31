@@ -11,27 +11,15 @@ int main() {
     printf("Escritura de datos!\n");
     printf("Archivos - Guardar en un archivo!\n");
 
-    FILE *archivo = fopen("datosPersonales001.dat", "wb");
+    FILE *archivo = fopen("datosPersonales001.dat", "rb");
 
     if(archivo != NULL) {
-        fflush(stdin);
+        fread(&person, sizeof(person), 1, archivo);
 
-        printf("Leer datos: \n");
-        printf("Ingresar nombre: \n");
-        gets(person.name);
-
-        printf("Ingresa apellido:\n");
-        gets(person.lastName);
-
-        printf("Ingresa edad:\n");
-        scanf("%i", &person.age);
-
-        printf("Imprimir datos: \n");
-        printf("%s\n", person.name);
-        printf("%s\n", person.lastName);
-        printf("%i\n", person.age);
-
-        fwrite(&person.name, sizeof(person), 1, archivo);
+        printf("Imprimir los datso\n");
+        printf("Nombre: %s\n", person.name);
+        printf("Nombre: %s\n", person.lastName);
+        printf("Nombre: %i\n", person.age);
 
         fclose("archivo");
     }
